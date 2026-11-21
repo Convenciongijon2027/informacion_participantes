@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convención Regional Noroeste 2026 | Leroy Merlin Gijón</title>
+  <meta name="description" content="Portal oficial de la Convención Regional Noroeste 2026 de Leroy Merlin en Gijón. Agenda, logística, traslados, hoteles y documentación.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Montserrat & Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandNavy: '#1E2B37',
+            brandTeal: '#009AA6',
+            brandTealDark: '#007A84',
+            brandGreenLM: '#78BE20',
+            brandLightBg: '#F4F6F8',
+            brandCardBorder: '#E2E8F0',
+            brandTextMuted: '#5C6F84'
+          },
+          fontFamily: {
+            title: ['Montserrat', 'sans-serif'],
+            body: ['"Open Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #1E2B37;
+      background-color: #FAFAFA;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, h5, h6, .font-title {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .line-doodle {
+      stroke-dasharray: 6;
+      animation: dash 30s linear infinite;
+    }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 1000;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F4F6F8;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #009AA6;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen text-brandNavy selection:bg-brandTeal selection:text-white">
+
+  <!-- BARRA SUPERIOR DE AVISO CORPORATIVO -->
+  <div class="bg-[#1E2B37] text-gray-200 text-xs px-4 py-2 border-b border-gray-700">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-2">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-brandTeal/20 text-brandTeal border border-brandTeal/40">
+          <span class="w-1.5 h-1.5 rounded-full bg-brandGreenLM animate-pulse"></span>
+          Portal Oficial del Evento
+        </span>
+        <span class="hidden sm:inline text-gray-500">|</span>
+        <span class="hidden sm:inline text-gray-300">Región Noroeste · Gijón 2026</span>
+      </div>
+      <div class="flex items-center gap-3 text-gray-300">
+        <span class="hidden md:flex items-center gap-1 text-[11px]">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brandGreenLM"></i>
+          <span>Uso interno · Equipos Leroy Merlin</span>
+        </span>
+        <button onclick="copyCurrentURL()" class="hover:text-white flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors cursor-pointer">
+          <i data-lucide="share-2" class="w-3 h-3"></i> Compartir enlace
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CABECERA Y MENÚ DE NAVEGACIÓN -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo y Título -->
+        <div class="flex items-center gap-3">
+          <div class="flex items-center cursor-pointer" onclick="navigate('inicio')">
+            <div class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center p-1 shadow-sm">
+              <svg viewBox="0 0 100 100" class="w-8 h-8">
+                <polygon points="50,12 90,82 10,82" fill="#78BE20" />
+                <polygon points="50,28 78,76 22,76" fill="#FFFFFF" />
+                <polygon points="50,42 68,72 32,72" fill="#78BE20" />
+              </svg>
+            </div>
+            <div class="ml-3">
+              <div class="text-xs uppercase tracking-widest font-extrabold text-brandTeal">Leroy Merlin España</div>
+              <h1 class="text-lg sm:text-xl font-bold tracking-tight text-brandNavy font-title leading-tight">
+                Convención Regional Noroeste <span class="text-brandTeal font-light">2026</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navegación Escritorio -->
+        <nav class="hidden lg:flex items-center space-x-1">
+          <button onclick="navigate('inicio')" id="nav-inicio" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 text-brandTeal bg-brandTeal/10">
+            <i data-lucide="home" class="w-4 h-4"></i> Inicio
+          </button>
+          <button onclick="navigate('agenda')" id="nav-agenda" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 text-brandNavy hover:text-brandTeal hover:bg-gray-100">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Agenda & Programa
+          </button>
+          <button onclick="navigate('logistica')" id="nav-logistica" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 text-brandNavy hover:text-brandTeal hover:bg-gray-100">
+            <i data-lucide="map-pin" class="w-4 h-4"></i> Logística & Sede
+          </button>
+          <button onclick="navigate('traslados')" id="nav-traslados" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 text-brandNavy hover:text-brandTeal hover:bg-gray-100">
+            <i data-lucide="bus" class="w-4 h-4"></i> Traslados & Hoteles
+          </button>
+          <button onclick="navigate('documentacion')" id="nav-documentacion" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 text-brandNavy hover:text-brandTeal hover:bg-gray-100">
+            <i data-lucide="folder-git-2" class="w-4 h-4"></i> Documentación
+          </button>
+          <button onclick="navigate('contacto')" id="nav-contacto" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 text-brandNavy hover:text-brandTeal hover:bg-gray-100">
+            <i data-lucide="help-circle" class="w-4 h-4"></i> Contacto & FAQs
+          </button>
+        </nav>
+
+        <!-- Botón Menú Móvil -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="p-2 rounded-lg text-brandNavy hover:text-brandTeal hover:bg-gray-100 focus:outline-none" aria-label="Abrir menú">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-3 pb-6 space-y-1">
+      <button onclick="navigate('inicio')" class="mobile-nav-item w-full text-left px-3 py-2.5 rounded-lg text-base font-medium flex items-center gap-2 text-brandTeal bg-brandTeal/10">
+        <i data-lucide="home" class="w-5 h-5"></i> Inicio
+      </button>
+      <button onclick="navigate('agenda')" class="mobile-nav-item w-full text-left px-3 py-2.5 rounded-lg text-base font-medium flex items-center gap-2 text-brandNavy hover:bg-gray-50">
+        <i data-lucide="calendar" class="w-5 h-5"></i> Agenda & Programa
+      </button>
+      <button onclick="navigate('logistica')" class="mobile-nav-item w-full text-left px-3 py-2.5 rounded-lg text-base font-medium flex items-center gap-2 text-brandNavy hover:bg-gray-50">
+        <i data-lucide="map-pin" class="w-5 h-5"></i> Logística & Sede (Gijón)
+      </button>
+      <button onclick="navigate('traslados')" class="mobile-nav-item w-full text-left px-3 py-2.5 rounded-lg text-base font-medium flex items-center gap-2 text-brandNavy hover:bg-gray-50">
+        <i data-lucide="bus" class="w-5 h-5"></i> Traslados & Hoteles
+      </button>
+      <button onclick="navigate('documentacion')" class="mobile-nav-item w-full text-left px-3 py-2.5 rounded-lg text-base font-medium flex items-center gap-2 text-brandNavy hover:bg-gray-50">
+        <i data-lucide="folder-git-2" class="w-5 h-5"></i> Documentación
+      </button>
+      <button onclick="navigate('contacto')" class="mobile-nav-item w-full text-left px-3 py-2.5 rounded-lg text-base font-medium flex items-center gap-2 text-brandNavy hover:bg-gray-50">
+        <i data-lucide="help-circle" class="w-5 h-5"></i> Contacto & FAQs
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="flex-grow">
+
+    <!-- ==================== SECCIÓN 1: INICIO ==================== -->
+    <section id="view-inicio" class="view-panel block">
+      
+      <!-- HERO BANNER -->
+      <div class="relative bg-brandNavy text-white overflow-hidden py-16 sm:py-24 border-b-4 border-brandTeal">
+        <div class="absolute inset-0 opacity-15 pointer-events-none">
+          <svg class="w-full h-full" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 120 C 200 40, 350 200, 500 120 S 750 40, 950 140 S 1100 200, 1200 120" stroke="#009AA6" stroke-width="3" fill="none" class="line-doodle"/>
+            <circle cx="950" cy="380" r="160" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="8 8"/>
+            <circle cx="200" cy="450" r="120" stroke="#009AA6" stroke-width="2"/>
+            <rect x="150" y="80" width="80" height="80" rx="12" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4"/>
+          </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 bg-brandTeal/20 border border-brandTeal/40 rounded-full px-4 py-1.5 text-xs sm:text-sm font-medium text-white mb-6">
+              <span class="w-2.5 h-2.5 rounded-full bg-brandGreenLM animate-pulse"></span>
+              Región Noroeste · Galicia | Castilla | Asturias
+            </div>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-title tracking-tight text-white mb-4 leading-tight">
+              Construyendo el futuro de nuestras tiendas <span class="text-brandTeal underline decoration-brandGreenLM decoration-4">2026</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 font-light leading-relaxed">
+              Punto de encuentro regional en <strong class="text-white font-semibold">Gijón</strong>. Toda la información operativa, logística, traslados y agenda oficial para los equipos de Galicia, Asturias y Castilla y León.
+            </p>
+            
+            <div class="flex flex-wrap gap-4">
+              <button onclick="navigate('agenda')" class="px-6 py-3.5 bg-brandTeal hover:bg-brandTealDark text-white font-semibold rounded-xl shadow-lg shadow-brandTeal/25 flex items-center gap-2 transition-all">
+                <i data-lucide="clock" class="w-5 h-5"></i> Consultar Programa Oficial
+              </button>
+              <button onclick="navigate('logistica')" class="px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-xl backdrop-blur-sm transition-all flex items-center gap-2">
+                <i data-lucide="navigation" class="w-5 h-5"></i> Sede & Cómo Llegar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metadatos rápidos (EDITABLE AQUÍ) -->
+        <div class="mt-12 bg-black/30 border-t border-white/10 py-4">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="border-r border-white/10 last:border-0">
+              <span class="block text-xs uppercase text-gray-400 font-medium">Fecha</span>
+              <strong class="text-white font-title text-base sm:text-lg">Semana 8 de Marzo 2026</strong>
+            </div>
+            <div class="border-r border-white/10 last:border-0">
+              <span class="block text-xs uppercase text-gray-400 font-medium">Sede Principal</span>
+              <strong class="text-white font-title text-base sm:text-lg">Leroy Merlin Gijón</strong>
+            </div>
+            <div class="border-r border-white/10 last:border-0">
+              <span class="block text-xs uppercase text-gray-400 font-medium">Cena Oficial</span>
+              <strong class="text-white font-title text-base sm:text-lg">Restaurante & Hotel Gijón</strong>
+            </div>
+            <div>
+              <span class="block text-xs uppercase text-gray-400 font-medium">Asistencia</span>
+              <strong class="text-brandTeal font-title text-base sm:text-lg">+180 Mandos & Equipos</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CUENTA ATRÁS -->
+      <section class="max-w-5xl mx-auto -mt-8 px-4 relative z-20">
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="text-center md:text-left">
+            <span class="text-xs font-bold text-brandTeal uppercase tracking-wider">Cuenta atrás oficial</span>
+            <h3 class="text-xl font-bold font-title text-brandNavy">Nos vemos en Gijón muy pronto</h3>
+            <p class="text-xs text-brandTextMuted">Revisa los traslados y acredita tu vehículo antes del 3 de marzo</p>
+          </div>
+          <div class="grid grid-cols-4 gap-3 text-center w-full md:w-auto">
+            <div class="bg-brandLightBg p-3 rounded-xl border border-gray-200 min-w-[70px]">
+              <span id="countdown-days" class="block text-2xl font-black font-title text-brandTeal">--</span>
+              <span class="text-[10px] uppercase font-bold text-gray-500">Días</span>
+            </div>
+            <div class="bg-brandLightBg p-3 rounded-xl border border-gray-200 min-w-[70px]">
+              <span id="countdown-hours" class="block text-2xl font-black font-title text-brandTeal">--</span>
+              <span class="text-[10px] uppercase font-bold text-gray-500">Horas</span>
+            </div>
+            <div class="bg-brandLightBg p-3 rounded-xl border border-gray-200 min-w-[70px]">
+              <span id="countdown-min" class="block text-2xl font-black font-title text-brandTeal">--</span>
+              <span class="text-[10px] uppercase font-bold text-gray-500">Min</span>
+            </div>
+            <div class="bg-brandLightBg p-3 rounded-xl border border-gray-200 min-w-[70px]">
+              <span id="countdown-sec" class="block text-2xl font-black font-title text-brandTeal">--</span>
+              <span class="text-[10px] uppercase font-bold text-gray-500">Seg</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCESOS RÁPIDOS -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold font-title text-brandNavy">Información clave de la convención</h2>
+          <p class="text-brandTextMuted text-sm mt-2">Accede directamente a los apartados logísticos de tu interés con un solo clic.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all p-7 flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brandTeal/10 text-brandTeal flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <i data-lucide="calendar" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold font-title text-brandNavy mb-2">Agenda y Horarios</h3>
+              <p class="text-brandTextMuted text-sm leading-relaxed mb-6">
+                Consulta los bloques de trabajo, coffee breaks, ponencias plenarias y las sesiones de trabajo intertiendas.
+              </p>
+            </div>
+            <button onclick="navigate('agenda')" class="text-sm font-bold text-brandTeal flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Ver cronograma completo <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all p-7 flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brandNavy/10 text-brandNavy flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold font-title text-brandNavy mb-2">Tienda Gijón & Parking</h3>
+              <p class="text-brandTextMuted text-sm leading-relaxed mb-6">
+                Acceso a la tienda, mapa interactivo, puerta de acceso reservada para participantes y acreditación de parkings.
+              </p>
+            </div>
+            <button onclick="navigate('logistica')" class="text-sm font-bold text-brandTeal flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Planos y accesos <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all p-7 flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brandGreenLM/15 text-[#548B11] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <i data-lucide="utensils" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold font-title text-brandNavy mb-2">Cena Oficial & Autobuses</h3>
+              <p class="text-brandTextMuted text-sm leading-relaxed mb-6">
+                Lugar de la cena institucional, paradas de lanzadera hacia los hoteles y código de vestimenta recomendado.
+              </p>
+            </div>
+            <button onclick="navigate('traslados')" class="text-sm font-bold text-brandTeal flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Ver traslados y hoteles <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- BIENVENIDA -->
+      <section class="bg-brandLightBg border-y border-gray-200 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-sm border border-gray-200 flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/3 flex justify-center">
+              <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-4 border-brandTeal shadow-md">
+                <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=600&q=80" alt="Equipo Leroy Merlin" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 inset-x-0 bg-brandNavy/80 text-white text-[11px] p-1.5 text-center font-bold">
+                  Tienda Leroy Merlin Gijón
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-2/3">
+              <span class="text-xs uppercase tracking-wider font-bold text-brandTeal">Mensaje del Comité Organizador</span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold font-title text-brandNavy mt-1 mb-4">
+                "Una región unida por la pasión al cliente y el espíritu de equipo"
+              </h2>
+              <p class="text-brandTextMuted text-sm sm:text-base leading-relaxed mb-4">
+                La tienda de Gijón tiene el honor de acoger en esta convención de 2026 a todos los directores, jefes de sector y equipos líderes de las tiendas de Galicia, Castilla y Asturias. Será una jornada para compartir retos, celebrar conquistas y alinear nuestros planes para seguir siendo referentes en el hábitat de nuestros clientes.
+              </p>
+              <div class="flex items-center gap-4 text-xs font-semibold text-brandNavy">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-gray-100 rounded-full">
+                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-brandGreenLM"></i> Coordinación Gijón
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-gray-100 rounded-full">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-brandTeal"></i> 3 Regiones Hermanadas
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ==================== SECCIÓN 2: AGENDA & PROGRAMA ==================== -->
+    <section id="view-agenda" class="view-panel hidden py-12">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-b border-gray-200 pb-6 mb-10">
+          <div class="inline-flex items-center gap-2 text-brandTeal font-bold text-xs uppercase tracking-wider mb-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Cronograma de Actividades
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-brandNavy">
+            Programa Oficial de la Convención
+          </h2>
+          <p class="text-brandTextMuted mt-2 text-sm sm:text-base">
+            Diseñado para compatibilizar presentaciones estratégicas regionales, mesas operativas y momentos de networking distendido.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 mb-8">
+          <button id="tab-dia1" onclick="selectDay(1)" class="day-tab px-5 py-2.5 rounded-xl font-bold text-sm bg-brandNavy text-white shadow-sm transition-all">
+            Jornada Principal (Día 1)
+          </button>
+          <button id="tab-dia2" onclick="selectDay(2)" class="day-tab px-5 py-2.5 rounded-xl font-bold text-sm bg-gray-100 text-brandNavy hover:bg-gray-200 transition-all">
+            Jornada de Cierre & Salidas (Día 2)
+          </button>
+        </div>
+
+        <!-- TIMELINE DÍA 1 -->
+        <div id="timeline-dia1" class="space-y-6 relative before:absolute before:inset-0 before:left-8 md:before:left-32 before:w-0.5 before:bg-brandTeal/30">
+          
+          <div class="relative flex flex-col md:flex-row items-start gap-4 md:gap-8 group">
+            <div class="md:w-28 text-left md:text-right font-title font-bold text-brandTeal text-base pt-1 pl-12 md:pl-0">08:30 - 09:15</div>
+            <div class="absolute left-6 md:left-28 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-brandTeal text-brandTeal flex items-center justify-center z-10 shadow-sm">
+              <i data-lucide="badge-check" class="w-4 h-4"></i>
+            </div>
+            <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm ml-12 md:ml-0 w-full hover:border-brandTeal transition-all">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <h4 class="text-lg font-bold font-title text-brandNavy">Llegada, Acreditaciones y Café de Bienvenida</h4>
+                <span class="px-2.5 py-1 bg-brandLightBg text-brandTeal text-xs font-semibold rounded-lg">Hall Tienda Gijón</span>
+              </div>
+              <p class="text-sm text-brandTextMuted leading-relaxed">
+                Recepción en la entrada reservada de colaboradores (acceso este). Entrega de identificadores oficiales, pack de bienvenida y café con productos asturianos.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative flex flex-col md:flex-row items-start gap-4 md:gap-8 group">
+            <div class="md:w-28 text-left md:text-right font-title font-bold text-brandNavy text-base pt-1 pl-12 md:pl-0">09:15 - 11:30</div>
+            <div class="absolute left-6 md:left-28 -translate-x-1/2 w-8 h-8 rounded-full bg-brandNavy text-white flex items-center justify-center z-10 shadow-sm">
+              <i data-lucide="presentation" class="w-4 h-4"></i>
+            </div>
+            <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm ml-12 md:ml-0 w-full hover:border-brandTeal transition-all">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <h4 class="text-lg font-bold font-title text-brandNavy">Sesión Plenaria Regional 2026: Retos y Conquistas</h4>
+                <span class="px-2.5 py-1 bg-blue-50 text-brandNavy text-xs font-semibold rounded-lg">Auditorio Principal</span>
+              </div>
+              <p class="text-sm text-brandTextMuted leading-relaxed mb-3">
+                Apertura institucional. Presentación del balance anual de las tres zonas, análisis de indicadores de cliente y hoja de ruta estratégica para el presente ejercicio.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="bg-gray-100 text-gray-700 px-2 py-0.5 rounded">Dirección Regional</span>
+                <span class="bg-gray-100 text-gray-700 px-2 py-0.5 rounded">Comité de Dirección</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative flex flex-col md:flex-row items-start gap-4 md:gap-8 group">
+            <div class="md:w-28 text-left md:text-right font-title font-bold text-brandTeal text-base pt-1 pl-12 md:pl-0">11:30 - 12:15</div>
+            <div class="absolute left-6 md:left-28 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-brandGreenLM text-brandGreenLM flex items-center justify-center z-10 shadow-sm">
+              <i data-lucide="coffee" class="w-4 h-4"></i>
+            </div>
+            <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm ml-12 md:ml-0 w-full hover:border-brandTeal transition-all">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold font-title text-brandNavy">Pausa Café & Dinámica de Networking</h4>
+                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-lg">Zona Chillout</span>
+              </div>
+              <p class="text-sm text-brandTextMuted leading-relaxed">
+                Espacio de intercambio distendido entre los líderes de las tiendas de Galicia, Asturias y Castilla.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative flex flex-col md:flex-row items-start gap-4 md:gap-8 group">
+            <div class="md:w-28 text-left md:text-right font-title font-bold text-brandNavy text-base pt-1 pl-12 md:pl-0">12:15 - 14:15</div>
+            <div class="absolute left-6 md:left-28 -translate-x-1/2 w-8 h-8 rounded-full bg-brandTeal text-white flex items-center justify-center z-10 shadow-sm">
+              <i data-lucide="layout-grid" class="w-4 h-4"></i>
+            </div>
+            <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm ml-12 md:ml-0 w-full hover:border-brandTeal transition-all">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <h4 class="text-lg font-bold font-title text-brandNavy">Workshops: Mesas de Trabajo Operativas</h4>
+                <span class="px-2.5 py-1 bg-teal-50 text-brandTeal text-xs font-semibold rounded-lg">Salas 1 a 4</span>
+              </div>
+              <p class="text-sm text-brandTextMuted leading-relaxed mb-3">
+                Grupos reducidos e interdisciplinares: Transformación digital en tienda, cadena de suministro y entrega en 24h, excelencia en proyectos y experiencia de colaborador.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative flex flex-col md:flex-row items-start gap-4 md:gap-8 group">
+            <div class="md:w-28 text-left md:text-right font-title font-bold text-brandNavy text-base pt-1 pl-12 md:pl-0">14:15 - 16:00</div>
+            <div class="absolute left-6 md:left-28 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-gray-400 text-gray-700 flex items-center justify-center z-10 shadow-sm">
+              <i data-lucide="utensils" class="w-4 h-4"></i>
+            </div>
+            <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm ml-12 md:ml-0 w-full">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold font-title text-brandNavy">Almuerzo Cóctel en Sede</h4>
+                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-lg">Comedor / Espacio Exterior</span>
+              </div>
+              <p class="text-sm text-brandTextMuted leading-relaxed">
+                Menú variado adaptado para intolerancias y opciones vegetarianas.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative flex flex-col md:flex-row items-start gap-4 md:gap-8 group">
+            <div class="md:w-28 text-left md:text-right font-title font-bold text-brandTeal text-base pt-1 pl-12 md:pl-0">20:45 - Cierre</div>
+            <div class="absolute left-6 md:left-28 -translate-x-1/2 w-8 h-8 rounded-full bg-brandGreenLM text-white flex items-center justify-center z-10 shadow-sm">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </div>
+            <div class="flex-1 bg-gradient-to-r from-brandNavy to-[#2A3F50] text-white p-6 rounded-2xl shadow-md ml-12 md:ml-0 w-full">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <h4 class="text-lg font-bold font-title text-white">Cena de Gala Regional & Reconocimientos</h4>
+                <span class="px-2.5 py-1 bg-brandTeal text-white text-xs font-bold rounded-lg">Restaurante / Finca Gijón</span>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-3">
+                Encuentro de confraternización, entrega de los reconocimientos regionales anuales y celebración conjunta de las tiendas de la zona Noroeste. (Salida de autobuses a las 20:15h desde los hoteles).
+              </p>
+              <div class="text-xs text-brandTeal font-medium">
+                Dress code: Casual elegante / Corporativo
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE DÍA 2 -->
+        <div id="timeline-dia2" class="hidden space-y-6 relative before:absolute before:inset-0 before:left-8 md:before:left-32 before:w-0.5 before:bg-brandTeal/30">
+          <div class="relative flex flex-col md:flex-row items-start gap-4 md:gap-8">
+            <div class="md:w-28 text-left md:text-right font-title font-bold text-brandTeal text-base pt-1 pl-12 md:pl-0">09:30 - 11:30</div>
+            <div class="absolute left-6 md:left-28 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-brandTeal text-brandTeal flex items-center justify-center z-10 shadow-sm">
+              <i data-lucide="check-square" class="w-4 h-4"></i>
+            </div>
+            <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm ml-12 md:ml-0 w-full">
+              <h4 class="text-lg font-bold font-title text-brandNavy mb-1">Conclusiones de Mesas y Plan de Acción</h4>
+              <p class="text-sm text-brandTextMuted">Puesta en común por tiendas y compromisos trimestrales para cada región.</p>
+            </div>
+          </div>
+          <div class="relative flex flex-col md:flex-row items-start gap-4 md:gap-8">
+            <div class="md:w-28 text-left md:text-right font-title font-bold text-brandNavy text-base pt-1 pl-12 md:pl-0">11:30 - 12:30</div>
+            <div class="absolute left-6 md:left-28 -translate-x-1/2 w-8 h-8 rounded-full bg-brandNavy text-white flex items-center justify-center z-10 shadow-sm">
+              <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+            </div>
+            <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm ml-12 md:ml-0 w-full">
+              <h4 class="text-lg font-bold font-title text-brandNavy mb-1">Clausura y Despedida</h4>
+              <p class="text-sm text-brandTextMuted">Foto de familia regional y almuerzo para llevar antes del viaje de regreso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECCIÓN 3: LOGÍSTICA & SEDE ==================== -->
+    <section id="view-logistica" class="view-panel hidden py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-b border-gray-200 pb-6 mb-10">
+          <div class="inline-flex items-center gap-2 text-brandTeal font-bold text-xs uppercase tracking-wider mb-2">
+            <i data-lucide="map-pin" class="w-4 h-4"></i> Guía Logística
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-brandNavy">
+            Sede del Evento, Accesos y Parking
+          </h2>
+          <p class="text-brandTextMuted mt-2 text-sm sm:text-base">
+            Ubicación de la tienda de Gijón, accesos peatonales reservados y área de estacionamiento señalizada.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <!-- Ficha 1 -->
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 bg-brandNavy text-white rounded-lg text-xs font-bold uppercase">Sede Oficial</span>
+                <i data-lucide="store" class="w-6 h-6 text-brandTeal"></i>
+              </div>
+              <h3 class="text-xl font-bold font-title text-brandNavy mb-2">Leroy Merlin Gijón</h3>
+              <p class="text-xs text-brandTextMuted mb-4">
+                Parque Comercial Roces / Carretera AS-II (Gijón)
+              </p>
+              <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brandTeal shrink-0 mt-0.5"></i>
+                  <span><strong>Acceso convención:</strong> Puerta Lateral Este (muelle colaboradores). No acceder por entrada de clientes.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brandTeal shrink-0 mt-0.5"></i>
+                  <span><strong>Acreditación:</strong> Mesa situada inmediatamente tras los tornos de seguridad.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brandTeal shrink-0 mt-0.5"></i>
+                  <span><strong>WIFI en tienda:</strong> LM_EVENTOS_2026 (Clave disponible en acreditación).</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 flex gap-2">
+              <a href="https://maps.google.com/?q=Leroy+Merlin+Gijon" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2.5 bg-brandTeal hover:bg-brandTealDark text-white font-semibold rounded-xl text-xs flex items-center justify-center gap-1.5 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4"></i> Abrir en Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Ficha 2 -->
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 bg-brandTeal text-white rounded-lg text-xs font-bold uppercase">Aparcamiento</span>
+                <i data-lucide="car" class="w-6 h-6 text-brandNavy"></i>
+              </div>
+              <h3 class="text-xl font-bold font-title text-brandNavy mb-2">Parking Colaboradores</h3>
+              <p class="text-xs text-brandTextMuted mb-4">
+                Zona reservada para coches oficiales y particulares de fuera de Asturias
+              </p>
+              <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="info" class="w-4 h-4 text-brandTeal shrink-0 mt-0.5"></i>
+                  <span><strong>Zona C & D:</strong> Espacio vallado y reservado exclusivamente para los vehículos de la convención.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="info" class="w-4 h-4 text-brandTeal shrink-0 mt-0.5"></i>
+                  <span><strong>Identificación:</strong> Dejar en el salpicadero la tarjeta imprimible disponible en 'Documentación'.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="info" class="w-4 h-4 text-brandTeal shrink-0 mt-0.5"></i>
+                  <span><strong>Puntos de recarga:</strong> 8 plazas con cargador eléctrico previa reserva.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100">
+              <button onclick="navigate('documentacion')" class="w-full text-center py-2.5 bg-brandLightBg hover:bg-gray-200 text-brandNavy font-semibold rounded-xl text-xs flex items-center justify-center gap-1.5 transition-colors">
+                <i data-lucide="download" class="w-4 h-4"></i> Descargar distintivo de parking
+              </button>
+            </div>
+          </div>
+
+          <!-- Ficha 3 -->
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 bg-brandGreenLM text-white rounded-lg text-xs font-bold uppercase">Cena Oficial</span>
+                <i data-lucide="sparkles" class="w-6 h-6 text-brandGreenLM"></i>
+              </div>
+              <h3 class="text-xl font-bold font-title text-brandNavy mb-2">Cena & Velada de Gala</h3>
+              <p class="text-xs text-brandTextMuted mb-4">
+                Finca / Restaurante Típico Asturiano en Gijón
+              </p>
+              <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brandGreenLM shrink-0 mt-0.5"></i>
+                  <span><strong>Recomendación logística:</strong> Utilizar los autobuses oficiales contratados desde los hoteles.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brandGreenLM shrink-0 mt-0.5"></i>
+                  <span><strong>Menú especial:</strong> En caso de alergias no comunicadas, avisar al personal de sala al sentarse.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brandGreenLM shrink-0 mt-0.5"></i>
+                  <span><strong>Retorno:</strong> Autobuses continuos cada 30 min desde las 23:30h hasta el cierre.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100">
+              <button onclick="navigate('traslados')" class="w-full text-center py-2.5 bg-brandNavy hover:bg-brandNavy/90 text-white font-semibold rounded-xl text-xs flex items-center justify-center gap-1.5 transition-colors">
+                <i data-lucide="bus" class="w-4 h-4"></i> Ver horarios del autobús
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAPA ESQUEMÁTICO DE GIJÓN -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div class="p-4 bg-gray-50 border-b border-gray-200 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+              <i data-lucide="map" class="w-5 h-5 text-brandTeal"></i>
+              <span class="text-sm font-bold font-title text-brandNavy">Plano Esquemático de Ubicaciones en Gijón</span>
+            </div>
+            <span class="text-xs text-brandTextMuted">Sede, Hoteles Concertados y Cena de Gala</span>
+          </div>
+
+          <div class="relative w-full h-80 bg-slate-100 flex items-center justify-center overflow-hidden">
+            <svg class="w-full h-full object-cover" viewBox="0 0 1000 400" preserveAspectRatio="none">
+              <rect width="1000" height="400" fill="#EBF2F7"/>
+              <path d="M0 0 Q 300 80, 600 50 T 1000 90 L 1000 0 L 0 0 Z" fill="#D3E6F2"/>
+              <text x="350" y="45" font-family="Montserrat" font-size="14" fill="#6A9AB8" font-weight="bold">Mar Cantábrico · Bahía de San Lorenzo</text>
+              
+              <path d="M0 250 L 1000 220" stroke="#CBD5E1" stroke-width="12"/>
+              <path d="M0 160 L 1000 140" stroke="#CBD5E1" stroke-width="8"/>
+              <path d="M250 80 L 300 400" stroke="#CBD5E1" stroke-width="10"/>
+              <path d="M650 60 L 700 400" stroke="#CBD5E1" stroke-width="10"/>
+              <path d="M450 140 L 500 400" stroke="#E2E8F0" stroke-width="6"/>
+
+              <!-- PIN 1: Leroy Merlin Gijón -->
+              <g transform="translate(680, 240)">
+                <circle cx="0" cy="0" r="22" fill="#009AA6" fill-opacity="0.2"/>
+                <circle cx="0" cy="0" r="14" fill="#009AA6"/>
+                <path d="M-6 -6 L6 -6 L0 7 Z" fill="#FFFFFF"/>
+                <rect x="-85" y="-45" width="170" height="26" rx="6" fill="#1E2B37"/>
+                <text x="0" y="-28" font-family="Montserrat" font-size="11" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Leroy Merlin Gijón (Sede)</text>
+              </g>
+
+              <!-- PIN 2: Hoteles -->
+              <g transform="translate(320, 150)">
+                <circle cx="0" cy="0" r="12" fill="#1E2B37"/>
+                <rect x="-65" y="-38" width="130" height="24" rx="6" fill="#1E2B37"/>
+                <text x="0" y="-22" font-family="Montserrat" font-size="10" fill="#FFFFFF" text-anchor="middle">Hoteles (Centro/Playa)</text>
+              </g>
+
+              <!-- PIN 3: Cena -->
+              <g transform="translate(220, 310)">
+                <circle cx="0" cy="0" r="12" fill="#78BE20"/>
+                <rect x="-60" y="-38" width="120" height="24" rx="6" fill="#78BE20"/>
+                <text x="0" y="-22" font-family="Montserrat" font-size="10" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Restaurante Gala</text>
+              </g>
+            </svg>
+            
+            <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-xl border border-gray-200 shadow text-xs space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-brandTeal"></span>
+                <span>Sede Tienda Gijón</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-brandNavy"></span>
+                <span>Hoteles oficiales de concentración</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-brandGreenLM"></span>
+                <span>Cena Regional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECCIÓN 4: TRASLADOS & HOTELES ==================== -->
+    <section id="view-traslados" class="view-panel hidden py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-b border-gray-200 pb-6 mb-10">
+          <div class="inline-flex items-center gap-2 text-brandTeal font-bold text-xs uppercase tracking-wider mb-2">
+            <i data-lucide="bus" class="w-4 h-4"></i> Movilidad y Alojamiento
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-brandNavy">
+            Lanzaderas Oficiales y Hoteles Concertados
+          </h2>
+          <p class="text-brandTextMuted mt-2 text-sm sm:text-base">
+            Información sobre los autobuses internos habilitados para evitar desplazamientos en vehículo propio durante la noche.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- Ruta Mañana -->
+          <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-brandTeal/10 text-brandTeal flex items-center justify-center">
+                <i data-lucide="sun" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-title text-brandNavy">Lanzadera Mañana: Hoteles → Tienda Gijón</h3>
+                <span class="text-xs text-brandTeal font-semibold">Jornada 1 · Convención</span>
+              </div>
+            </div>
+
+            <div class="space-y-4 border-l-2 border-brandTeal/30 ml-4 pl-4 py-2 text-sm">
+              <div>
+                <strong class="text-brandNavy font-title">08:00h · Parada 1:</strong> Hotel Silken Ciudad Gijón
+                <div class="text-xs text-brandTextMuted">Punto de encuentro en puerta principal</div>
+              </div>
+              <div>
+                <strong class="text-brandNavy font-title">08:15h · Parada 2:</strong> Hotel Abba Gijón (Playa de San Lorenzo)
+                <div class="text-xs text-brandTextMuted">Frente a la marquesina de recepción</div>
+              </div>
+              <div>
+                <strong class="text-brandNavy font-title">08:35h · Llegada:</strong> Tienda Leroy Merlin Gijón
+                <div class="text-xs text-brandTeal font-semibold">Entrada directa al café de bienvenida</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ruta Noche -->
+          <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-brandNavy/10 text-brandNavy flex items-center justify-center">
+                <i data-lucide="moon" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-title text-brandNavy">Lanzadera Noche: Hoteles ↔ Cena Oficial</h3>
+                <span class="text-xs text-brandTeal font-semibold">Ida y vuelta nocturna</span>
+              </div>
+            </div>
+
+            <div class="space-y-4 border-l-2 border-brandNavy/30 ml-4 pl-4 py-2 text-sm">
+              <div>
+                <strong class="text-brandNavy font-title">20:15h · Salida Ida:</strong> Ruta unificada por hoteles concertados
+                <div class="text-xs text-brandTextMuted">Por favor ser puntuales para evitar demoras en la cena</div>
+              </div>
+              <div>
+                <strong class="text-brandNavy font-title">20:45h · Llegada:</strong> Finca / Restaurante de la Gala
+              </div>
+              <div>
+                <strong class="text-brandNavy font-title">23:30h / 00:30h / 01:30h · Retornos:</strong>
+                <div class="text-xs text-brandTextMuted">Autobús de vuelta continuo hacia los dos hoteles oficiales</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold font-title text-brandNavy mb-6">Hoteles Oficiales de Concentración</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col sm:flex-row">
+            <div class="sm:w-2/5 h-48 sm:h-auto bg-gray-200">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80" alt="Hotel Silken Ciudad Gijón" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 sm:w-3/5 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brandTeal">Hotel Concertado A</span>
+                <h4 class="text-lg font-bold font-title text-brandNavy mt-1">Hotel Silken Ciudad Gijón (4*)</h4>
+                <p class="text-xs text-brandTextMuted mt-1 mb-4">
+                  C/ Bohemia, 1, Gijón. Próximo a estaciones de tren y autobús interurbanas para llegadas de Galicia y Castilla.
+                </p>
+                <div class="text-xs text-gray-600 space-y-1">
+                  <div>✔ Reserva centralizada por Leroy Merlin</div>
+                  <div>✔ Desayuno buffet incluido</div>
+                </div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+                <span class="text-brandNavy font-semibold">Parada de autobús propia</span>
+                <span class="text-emerald-700 font-bold">Bloque reservado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col sm:flex-row">
+            <div class="sm:w-2/5 h-48 sm:h-auto bg-gray-200">
+              <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=500&q=80" alt="Hotel Abba Playa Gijón" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 sm:w-3/5 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brandTeal">Hotel Concertado B</span>
+                <h4 class="text-lg font-bold font-title text-brandNavy mt-1">Hotel Abba Playa Gijón (4*)</h4>
+                <p class="text-xs text-brandTextMuted mt-1 mb-4">
+                  Paseo del Dr. Fleming, 37. Vistas al mar y rápido enlace con las vías de circunvalación hacia la tienda.
+                </p>
+                <div class="text-xs text-gray-600 space-y-1">
+                  <div>✔ Reserva centralizada por Leroy Merlin</div>
+                  <div>✔ Parking exterior concertado</div>
+                </div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+                <span class="text-brandNavy font-semibold">Parada de autobús propia</span>
+                <span class="text-emerald-700 font-bold">Bloque reservado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECCIÓN 5: DOCUMENTACIÓN ==================== -->
+    <section id="view-documentacion" class="view-panel hidden py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-b border-gray-200 pb-6 mb-10">
+          <div class="inline-flex items-center gap-2 text-brandTeal font-bold text-xs uppercase tracking-wider mb-2">
+            <i data-lucide="folder-git-2" class="w-4 h-4"></i> Repositorio de Archivos
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-brandNavy">
+            Archivos, Presentaciones y Documentación
+          </h2>
+          <p class="text-brandTextMuted mt-2 text-sm sm:text-base">
+            Acceso centralizado a fichas descargables, planillas, acreditaciones y dosier de bienvenida.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mb-10">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-gray-200">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brandTeal/10 text-brandTeal flex items-center justify-center">
+                <i data-lucide="folder-open" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold font-title text-brandNavy text-base">Carpeta Oficial: Convención Noroeste 2026</h4>
+                <span class="text-xs text-brandTextMuted">Documentación actualizada para asistentes y ponentes</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-bold flex items-center gap-1">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i> Actualizado
+              </span>
+              <button onclick="triggerMockDownload('Carpeta_Completa_Gijon2026.zip')" class="px-3.5 py-1.5 bg-brandTeal hover:bg-brandTealDark text-white font-semibold text-xs rounded-lg transition-colors flex items-center gap-1.5">
+                <i data-lucide="download-cloud" class="w-3.5 h-3.5"></i> Descargar Todo (.zip)
+              </button>
+            </div>
+          </div>
+
+          <!-- Listado de Archivos (Puedes sustituir triggerMockDownload por href="tu-enlace-drive" cuando subas los PDFs) -->
+          <div class="divide-y divide-gray-100 mt-2">
+            <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-gray-50 px-2 rounded-xl transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                  <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-brandNavy">Dossier_Bienvenida_Convencion_Gijon_2026.pdf</h5>
+                  <p class="text-xs text-brandTextMuted">Guía completa de 16 páginas con mapas, teléfonos y normas de tienda (2.4 MB)</p>
+                </div>
+              </div>
+              <button onclick="triggerMockDownload('Dossier_Bienvenida_Convencion_Gijon_2026.pdf')" class="self-end sm:self-center px-3 py-1.5 text-xs font-semibold text-brandTeal hover:bg-brandTeal/10 rounded-lg flex items-center gap-1">
+                <i data-lucide="download" class="w-4 h-4"></i> Descargar
+              </button>
+            </div>
+
+            <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-gray-50 px-2 rounded-xl transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                  <i data-lucide="presentation" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-brandNavy">Plantilla_Presentaciones_2026_Oficial.pptx</h5>
+                  <p class="text-xs text-brandTextMuted">Plantilla corporativa con tipografías y colores autorizados para ponentes (14.8 MB)</p>
+                </div>
+              </div>
+              <button onclick="triggerMockDownload('Plantilla_Presentaciones_2026_Oficial.pptx')" class="self-end sm:self-center px-3 py-1.5 text-xs font-semibold text-brandTeal hover:bg-brandTeal/10 rounded-lg flex items-center gap-1">
+                <i data-lucide="download" class="w-4 h-4"></i> Descargar
+              </button>
+            </div>
+
+            <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-gray-50 px-2 rounded-xl transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                  <i data-lucide="file-spreadsheet" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-brandNavy">Ficha_Mesas_Trabajo_Talleres.xlsx</h5>
+                  <p class="text-xs text-brandTextMuted">Formulario de síntesis para los portavoces de cada mesa regional (850 KB)</p>
+                </div>
+              </div>
+              <button onclick="triggerMockDownload('Ficha_Mesas_Trabajo_Talleres.xlsx')" class="self-end sm:self-center px-3 py-1.5 text-xs font-semibold text-brandTeal hover:bg-brandTeal/10 rounded-lg flex items-center gap-1">
+                <i data-lucide="download" class="w-4 h-4"></i> Descargar
+              </button>
+            </div>
+
+            <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-gray-50 px-2 rounded-xl transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-blue-100 text-brandNavy flex items-center justify-center shrink-0">
+                  <i data-lucide="printer" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-brandNavy">Distintivo_Imprimible_Parking_Vehiculos.pdf</h5>
+                  <p class="text-xs text-brandTextMuted">Tarjeta A4 recortable obligatoria en salpicadero para el parking reservado (320 KB)</p>
+                </div>
+              </div>
+              <button onclick="triggerMockDownload('Distintivo_Imprimible_Parking_Vehiculos.pdf')" class="self-end sm:self-center px-3 py-1.5 text-xs font-semibold text-brandTeal hover:bg-brandTeal/10 rounded-lg flex items-center gap-1">
+                <i data-lucide="download" class="w-4 h-4"></i> Descargar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brandLightBg p-6 rounded-2xl border border-gray-200 text-xs sm:text-sm text-brandTextMuted flex items-start gap-3">
+          <i data-lucide="shield-alert" class="w-5 h-5 text-brandTeal shrink-0 mt-0.5"></i>
+          <div>
+            <strong>Confidencialidad interna:</strong> Los datos y presentaciones de balance anual mostrados en esta convención son de uso interno exclusivo para los equipos de Leroy Merlin España. Queda prohibida su difusión fuera de los canales corporativos.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECCIÓN 6: CONTACTO & FAQS ==================== -->
+    <section id="view-contacto" class="view-panel hidden py-12">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-b border-gray-200 pb-6 mb-10">
+          <div class="inline-flex items-center gap-2 text-brandTeal font-bold text-xs uppercase tracking-wider mb-2">
+            <i data-lucide="help-circle" class="w-4 h-4"></i> Soporte al Asistente
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-brandNavy">
+            Preguntas Frecuentes & Teléfonos de Guardia
+          </h2>
+          <p class="text-brandTextMuted mt-2 text-sm sm:text-base">
+            Estamos a tu disposición antes, durante y después del evento para que solo tengas que preocuparte de participar.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-brandTeal/10 text-brandTeal flex items-center justify-center mb-4">
+              <i data-lucide="phone-call" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold font-title text-brandNavy">Coordinación Sede Gijón</h4>
+            <p class="text-xs text-brandTextMuted mb-3">Incidencias en tienda y accesos de vehículos</p>
+            <div class="text-sm font-mono font-bold text-brandTeal">+34 985 00 00 01</div>
+            <div class="text-[11px] text-gray-500">coordinacion.gijon@leroymerlin.es</div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-brandNavy/10 text-brandNavy flex items-center justify-center mb-4">
+              <i data-lucide="bus" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold font-title text-brandNavy">Coordinación de Traslados</h4>
+            <p class="text-xs text-brandTextMuted mb-3">Retrasos en autobuses y enlaces desde hoteles</p>
+            <div class="text-sm font-mono font-bold text-brandNavy">+34 985 00 00 02</div>
+            <div class="text-[11px] text-gray-500">traslados.noroeste@leroymerlin.es</div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-brandGreenLM/20 text-[#4E8011] flex items-center justify-center mb-4">
+              <i data-lucide="utensils" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold font-title text-brandNavy">Catering & Dietas</h4>
+            <p class="text-xs text-brandTextMuted mb-3">Gestión de intolerancias alimentarias</p>
+            <div class="text-sm font-mono font-bold text-[#4E8011]">+34 985 00 00 03</div>
+            <div class="text-[11px] text-gray-500">catering.convencion@leroymerlin.es</div>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold font-title text-brandNavy mb-6">Preguntas Frecuentes (FAQs)</h3>
+        <div class="space-y-4">
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(1)" class="w-full text-left p-5 flex justify-between items-center font-title font-bold text-brandNavy hover:text-brandTeal transition-colors">
+              <span>¿Cuál es el código de vestimenta (dress code) para cada bloque?</span>
+              <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-brandTeal transition-transform"></i>
+            </button>
+            <div id="faq-content-1" class="hidden px-5 pb-5 text-sm text-brandTextMuted border-t border-gray-100 pt-3">
+              Para las sesiones de trabajo matinales en la tienda de Gijón se recomienda ropa informal corporativa cómoda (camisa, polo o jersey con calzado apto para caminar por tienda). Para la cena oficial de gala, el código es casual elegante.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(2)" class="w-full text-left p-5 flex justify-between items-center font-title font-bold text-brandNavy hover:text-brandTeal transition-colors">
+              <span>¿Dónde puedo dejar el equipaje si llego directamente a la tienda?</span>
+              <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-brandTeal transition-transform"></i>
+            </button>
+            <div id="faq-content-2" class="hidden px-5 pb-5 text-sm text-brandTextMuted border-t border-gray-100 pt-3">
+              En la entrada de colaboradores habilitaremos un servicio de consigna vigilada durante toda la mañana para que podáis dejar maletas y abrigos hasta el traslado a los hoteles al mediodía o tarde.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(3)" class="w-full text-left p-5 flex justify-between items-center font-title font-bold text-brandNavy hover:text-brandTeal transition-colors">
+              <span>¿Puedo asistir a la cena oficial en mi propio vehículo?</span>
+              <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-brandTeal transition-transform"></i>
+            </button>
+            <div id="faq-content-3" class="hidden px-5 pb-5 text-sm text-brandTextMuted border-t border-gray-100 pt-3">
+              Aunque la finca dispone de aparcamiento, recomendamos encarecidamente emplear las lanzaderas de autobús concertadas para garantizar la seguridad de todos los participantes y facilitar el disfrute de la velada.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(4)" class="w-full text-left p-5 flex justify-between items-center font-title font-bold text-brandNavy hover:text-brandTeal transition-colors">
+              <span>¿Cómo se tramitan los gastos de kilometraje o peajes?</span>
+              <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-brandTeal transition-transform"></i>
+            </button>
+            <div id="faq-content-4" class="hidden px-5 pb-5 text-sm text-brandTextMuted border-t border-gray-100 pt-3">
+              A través de la aplicación corporativa de liquidación de gastos de viaje habitual seleccionando en el desplegable el centro de coste de la Convención Regional Noroeste 2026.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- NOTIFICACIÓN TOAST -->
+  <div id="toastMessage" class="fixed bottom-6 right-6 z-50 transform translate-y-32 transition-transform duration-300 bg-brandNavy text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-brandTeal/50 flex items-center gap-3">
+    <div class="w-7 h-7 rounded-full bg-brandTeal text-white flex items-center justify-center shrink-0">
+      <i data-lucide="check" class="w-4 h-4"></i>
+    </div>
+    <div>
+      <h5 id="toastTitle" class="text-xs font-bold font-title">Aviso</h5>
+      <p id="toastBody" class="text-[11px] text-gray-300">Acción completada.</p>
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-brandNavy text-white border-t-4 border-brandGreenLM py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-gray-700">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-white p-1 flex items-center justify-center">
+            <svg viewBox="0 0 100 100" class="w-7 h-7">
+              <polygon points="50,12 90,82 10,82" fill="#78BE20" />
+              <polygon points="50,28 78,76 22,76" fill="#FFFFFF" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-title font-bold text-white text-base">Leroy Merlin España</h4>
+            <p class="text-xs text-gray-400">Región Noroeste · Galicia · Asturias · Castilla</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-xs text-gray-300 font-medium">
+          <button onclick="navigate('inicio')" class="hover:text-brandTeal">Inicio</button>
+          <button onclick="navigate('agenda')" class="hover:text-brandTeal">Agenda</button>
+          <button onclick="navigate('logistica')" class="hover:text-brandTeal">Logística Sede</button>
+          <button onclick="navigate('traslados')" class="hover:text-brandTeal">Traslados</button>
+          <button onclick="navigate('documentacion')" class="hover:text-brandTeal">Documentación</button>
+          <button onclick="navigate('contacto')" class="hover:text-brandTeal">Contacto</button>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+        <div>
+          Portal interno para la Convención Regional Gijón 2026. Todos los derechos reservados.
+        </div>
+        <div class="flex items-center gap-2">
+          <span>Identidad corporativa 2026</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-brandTeal"></span>
+          <span class="text-brandGreenLM font-semibold">Gijón · Marzo 2026</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS DE NAVEGACIÓN E INTERACTIVIDAD -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+      initCountdown();
+
+      // Permitir abrir una sección directamente mediante URL (#agenda, #logistica, etc.)
+      const initialHash = window.location.hash.replace('#', '');
+      const validViews = ['inicio', 'agenda', 'logistica', 'traslados', 'documentacion', 'contacto'];
+      if (validViews.includes(initialHash)) {
+        navigate(initialHash, false);
+      }
+    });
+
+    function navigate(viewName, updateHash = true) {
+      const views = document.querySelectorAll('.view-panel');
+      views.forEach(v => {
+        v.classList.add('hidden');
+        v.classList.remove('block');
+      });
+
+      const targetView = document.getElementById('view-' + viewName);
+      if (targetView) {
+        targetView.classList.remove('hidden');
+        targetView.classList.add('block');
+      }
+
+      const navButtons = document.querySelectorAll('.nav-item');
+      navButtons.forEach(btn => {
+        btn.classList.remove('text-brandTeal', 'bg-brandTeal/10');
+        btn.classList.add('text-brandNavy');
+      });
+
+      const activeBtn = document.getElementById('nav-' + viewName);
+      if (activeBtn) {
+        activeBtn.classList.add('text-brandTeal', 'bg-brandTeal/10');
+        activeBtn.classList.remove('text-brandNavy');
+      }
+
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+
+      if (updateHash) {
+        history.replaceState(null, null, '#' + viewName);
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+
+    function selectDay(dayNumber) {
+      const dia1 = document.getElementById('timeline-dia1');
+      const dia2 = document.getElementById('timeline-dia2');
+      const tab1 = document.getElementById('tab-dia1');
+      const tab2 = document.getElementById('tab-dia2');
+
+      if (dayNumber === 1) {
+        dia1.classList.remove('hidden');
+        dia2.classList.add('hidden');
+        tab1.className = 'day-tab px-5 py-2.5 rounded-xl font-bold text-sm bg-brandNavy text-white shadow-sm transition-all';
+        tab2.className = 'day-tab px-5 py-2.5 rounded-xl font-bold text-sm bg-gray-100 text-brandNavy hover:bg-gray-200 transition-all';
+      } else {
+        dia1.classList.add('hidden');
+        dia2.classList.remove('hidden');
+        tab2.className = 'day-tab px-5 py-2.5 rounded-xl font-bold text-sm bg-brandNavy text-white shadow-sm transition-all';
+        tab1.className = 'day-tab px-5 py-2.5 rounded-xl font-bold text-sm bg-gray-100 text-brandNavy hover:bg-gray-200 transition-all';
+      }
+    }
+
+    function toggleFaq(index) {
+      const content = document.getElementById('faq-content-' + index);
+      const icon = document.getElementById('faq-icon-' + index);
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    }
+
+    function initCountdown() {
+      // Cambia esta fecha si deseas ajustar el día y hora exacta del contador
+      const targetDate = new Date("March 8, 2026 09:00:00").getTime();
+
+      function updateTimer() {
+        const now = new Date().getTime();
+        let distance = targetDate - now;
+
+        if (distance < 0) {
+          distance = 0;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown-days").innerText = String(days).padStart(2, '0');
+        document.getElementById("countdown-hours").innerText = String(hours).padStart(2, '0');
+        document.getElementById("countdown-min").innerText = String(minutes).padStart(2, '0');
+        document.getElementById("countdown-sec").innerText = String(seconds).padStart(2, '0');
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    }
+
+    function showToast(title, message) {
+      const toast = document.getElementById('toastMessage');
+      document.getElementById('toastTitle').innerText = title;
+      document.getElementById('toastBody').innerText = message;
+
+      toast.classList.remove('translate-y-32');
+      toast.classList.add('translate-y-0');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0');
+        toast.classList.add('translate-y-32');
+      }, 3500);
+    }
+
+    function triggerMockDownload(fileName) {
+      showToast('Archivo pendiente de enlace', 'Enlaza "' + fileName + '" a tu carpeta de Google Drive o súbelo al repositorio.');
+    }
+
+    function copyCurrentURL() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast('Enlace copiado', 'URL de la convención guardada en el portapapeles.');
+      });
+    }
+  </script>
+</body>
+</html>
