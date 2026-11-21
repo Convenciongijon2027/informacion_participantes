@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convención Regional Noroeste 2026 | Leroy Merlin Gijón</title>
-  <meta name="description" content="Portal oficial de la Convención Regional Noroeste 2026 de Leroy Merlin en Gijón. Agenda, logística, traslados, hoteles y documentación.">
+  <title>Convención Regional Noroeste 2027 | Leroy Merlin Gijón</title>
+  <meta name="description" content="Portal oficial de la Convención Regional Noroeste 2027 de Leroy Merlin en Gijón. Agenda, logística, traslados, hoteles y documentación.">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -78,7 +78,7 @@
           Portal Oficial del Evento
         </span>
         <span class="hidden sm:inline text-gray-500">|</span>
-        <span class="hidden sm:inline text-gray-300">Región Noroeste · Gijón 2026</span>
+        <span class="hidden sm:inline text-gray-300">Región Noroeste · Gijón 2027</span>
       </div>
       <div class="flex items-center gap-3 text-gray-300">
         <span class="hidden md:flex items-center gap-1 text-[11px]">
@@ -96,20 +96,28 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <!-- Logo y Título -->
+        <!-- Logo Oficial Leroy Merlin y Título -->
         <div class="flex items-center gap-3">
           <div class="flex items-center cursor-pointer" onclick="navigate('inicio')">
-            <div class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center p-1 shadow-sm">
-              <svg viewBox="0 0 100 100" class="w-8 h-8">
-                <polygon points="50,12 90,82 10,82" fill="#78BE20" />
-                <polygon points="50,28 78,76 22,76" fill="#FFFFFF" />
-                <polygon points="50,42 68,72 32,72" fill="#78BE20" />
+            <div class="h-11 px-2 rounded-lg bg-white border border-gray-200 flex items-center justify-center shadow-sm">
+              <!-- Logo oficial Leroy Merlin en SVG -->
+              <svg viewBox="0 0 220 135" class="h-9 w-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Leroy Merlin">
+                <!-- Triángulo verde oficial -->
+                <polygon points="110,48 192,132 28,132" fill="#78BE20" />
+                <!-- Letras LEROY inclinadas a la izquierda -->
+                <g transform="translate(106, 36) rotate(-45)">
+                  <text x="-8" y="0" font-family="Montserrat, Arial, sans-serif" font-weight="900" font-size="25" fill="#0B1F2C" text-anchor="end" letter-spacing="0.5">LEROY</text>
+                </g>
+                <!-- Letras MERLIN inclinadas a la derecha -->
+                <g transform="translate(114, 36) rotate(45)">
+                  <text x="8" y="0" font-family="Montserrat, Arial, sans-serif" font-weight="900" font-size="25" fill="#0B1F2C" text-anchor="start" letter-spacing="0.5">MERLIN</text>
+                </g>
               </svg>
             </div>
             <div class="ml-3">
               <div class="text-xs uppercase tracking-widest font-extrabold text-brandTeal">Leroy Merlin España</div>
               <h1 class="text-lg sm:text-xl font-bold tracking-tight text-brandNavy font-title leading-tight">
-                Convención Regional Noroeste <span class="text-brandTeal font-light">2026</span>
+                Convención Regional Noroeste <span class="text-brandTeal font-light">2027</span>
               </h1>
             </div>
           </div>
@@ -193,7 +201,7 @@
               Región Noroeste · Galicia | Castilla | Asturias
             </div>
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-title tracking-tight text-white mb-4 leading-tight">
-              Construyendo el futuro de nuestras tiendas <span class="text-brandTeal underline decoration-brandGreenLM decoration-4">2026</span>
+              Construyendo el futuro de nuestras tiendas <span class="text-brandTeal underline decoration-brandGreenLM decoration-4">2027</span>
             </h1>
             <p class="text-lg sm:text-xl text-gray-300 mb-8 font-light leading-relaxed">
               Punto de encuentro regional en <strong class="text-white font-semibold">Gijón</strong>. Toda la información operativa, logística, traslados y agenda oficial para los equipos de Galicia, Asturias y Castilla y León.
@@ -210,12 +218,12 @@
           </div>
         </div>
 
-        <!-- Metadatos rápidos (EDITABLE AQUÍ) -->
+        <!-- Metadatos rápidos -->
         <div class="mt-12 bg-black/30 border-t border-white/10 py-4">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div class="border-r border-white/10 last:border-0">
-              <span class="block text-xs uppercase text-gray-400 font-medium">Fecha</span>
-              <strong class="text-white font-title text-base sm:text-lg">Semana 8 de Marzo 2026</strong>
+              <span class="block text-xs uppercase text-gray-400 font-medium">Fecha Oficial</span>
+              <strong class="text-white font-title text-base sm:text-lg">11 de Marzo 2027</strong>
             </div>
             <div class="border-r border-white/10 last:border-0">
               <span class="block text-xs uppercase text-gray-400 font-medium">Sede Principal</span>
@@ -223,7 +231,7 @@
             </div>
             <div class="border-r border-white/10 last:border-0">
               <span class="block text-xs uppercase text-gray-400 font-medium">Cena Oficial</span>
-              <strong class="text-white font-title text-base sm:text-lg">Restaurante & Hotel Gijón</strong>
+              <strong class="text-white font-title text-base sm:text-lg">Hotel Abba Playa Gijón</strong>
             </div>
             <div>
               <span class="block text-xs uppercase text-gray-400 font-medium">Asistencia</span>
@@ -237,9 +245,9 @@
       <section class="max-w-5xl mx-auto -mt-8 px-4 relative z-20">
         <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="text-center md:text-left">
-            <span class="text-xs font-bold text-brandTeal uppercase tracking-wider">Cuenta atrás oficial</span>
+            <span class="text-xs font-bold text-brandTeal uppercase tracking-wider">Cuenta atrás oficial · 11 Marzo 2027</span>
             <h3 class="text-xl font-bold font-title text-brandNavy">Nos vemos en Gijón muy pronto</h3>
-            <p class="text-xs text-brandTextMuted">Revisa los traslados y acredita tu vehículo antes del 3 de marzo</p>
+            <p class="text-xs text-brandTextMuted">Revisa los traslados y acredita tu vehículo con antelación</p>
           </div>
           <div class="grid grid-cols-4 gap-3 text-center w-full md:w-auto">
             <div class="bg-brandLightBg p-3 rounded-xl border border-gray-200 min-w-[70px]">
@@ -307,7 +315,7 @@
               </div>
               <h3 class="text-xl font-bold font-title text-brandNavy mb-2">Cena Oficial & Autobuses</h3>
               <p class="text-brandTextMuted text-sm leading-relaxed mb-6">
-                Lugar de la cena institucional, paradas de lanzadera hacia los hoteles y código de vestimenta recomendado.
+                Cena en el Hotel Abba Playa Gijón, paradas de lanzadera entre hoteles y código de vestimenta recomendado.
               </p>
             </div>
             <button onclick="navigate('traslados')" class="text-sm font-bold text-brandTeal flex items-center gap-1 group-hover:translate-x-1 transition-transform">
@@ -335,14 +343,14 @@
                 "Una región unida por la pasión al cliente y el espíritu de equipo"
               </h2>
               <p class="text-brandTextMuted text-sm sm:text-base leading-relaxed mb-4">
-                La tienda de Gijón tiene el honor de acoger en esta convención de 2026 a todos los directores, jefes de sector y equipos líderes de las tiendas de Galicia, Castilla y Asturias. Será una jornada para compartir retos, celebrar conquistas y alinear nuestros planes para seguir siendo referentes en el hábitat de nuestros clientes.
+                La tienda de Gijón tiene el honor de acoger en esta convención regional 2027 a todos los comités de dirección de las tiendas de Galicia, Castilla y Asturias así como de todos nuestros equipos transversales y regionales. Será una jornada para compartir retos, celebrar conquistas y alinear nuestros planes para seguir siendo referentes en el hábitat de nuestros clientes.
               </p>
-              <div class="flex items-center gap-4 text-xs font-semibold text-brandNavy">
+              <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-brandNavy">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-gray-100 rounded-full">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5 text-brandGreenLM"></i> Coordinación Gijón
                 </span>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-gray-100 rounded-full">
-                  <i data-lucide="users" class="w-3.5 h-3.5 text-brandTeal"></i> 3 Regiones Hermanadas
+                  <i data-lucide="compass" class="w-3.5 h-3.5 text-brandTeal"></i> Región Noroeste
                 </span>
               </div>
             </div>
@@ -356,7 +364,7 @@
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="border-b border-gray-200 pb-6 mb-10">
           <div class="inline-flex items-center gap-2 text-brandTeal font-bold text-xs uppercase tracking-wider mb-2">
-            <i data-lucide="calendar" class="w-4 h-4"></i> Cronograma de Actividades
+            <i data-lucide="calendar" class="w-4 h-4"></i> Cronograma de Actividades · 11 Marzo 2027
           </div>
           <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-brandNavy">
             Programa Oficial de la Convención
@@ -368,10 +376,10 @@
 
         <div class="flex items-center gap-3 mb-8">
           <button id="tab-dia1" onclick="selectDay(1)" class="day-tab px-5 py-2.5 rounded-xl font-bold text-sm bg-brandNavy text-white shadow-sm transition-all">
-            Jornada Principal (Día 1)
+            Jornada Principal (11 Marzo)
           </button>
           <button id="tab-dia2" onclick="selectDay(2)" class="day-tab px-5 py-2.5 rounded-xl font-bold text-sm bg-gray-100 text-brandNavy hover:bg-gray-200 transition-all">
-            Jornada de Cierre & Salidas (Día 2)
+            Jornada de Cierre & Salidas (12 Marzo)
           </button>
         </div>
 
@@ -401,15 +409,15 @@
             </div>
             <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm ml-12 md:ml-0 w-full hover:border-brandTeal transition-all">
               <div class="flex items-center justify-between gap-2 mb-2">
-                <h4 class="text-lg font-bold font-title text-brandNavy">Sesión Plenaria Regional 2026: Retos y Conquistas</h4>
+                <h4 class="text-lg font-bold font-title text-brandNavy">Sesión Plenaria Regional 2027: Retos y Conquistas</h4>
                 <span class="px-2.5 py-1 bg-blue-50 text-brandNavy text-xs font-semibold rounded-lg">Auditorio Principal</span>
               </div>
               <p class="text-sm text-brandTextMuted leading-relaxed mb-3">
-                Apertura institucional. Presentación del balance anual de las tres zonas, análisis de indicadores de cliente y hoja de ruta estratégica para el presente ejercicio.
+                Apertura institucional. Presentación del balance anual, análisis de indicadores de cliente y hoja de ruta estratégica para el presente ejercicio.
               </p>
               <div class="flex flex-wrap gap-2 text-xs">
                 <span class="bg-gray-100 text-gray-700 px-2 py-0.5 rounded">Dirección Regional</span>
-                <span class="bg-gray-100 text-gray-700 px-2 py-0.5 rounded">Comité de Dirección</span>
+                <span class="bg-gray-100 text-gray-700 px-2 py-0.5 rounded">Comités de Dirección & Transversales</span>
               </div>
             </div>
           </div>
@@ -425,7 +433,7 @@
                 <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-lg">Zona Chillout</span>
               </div>
               <p class="text-sm text-brandTextMuted leading-relaxed">
-                Espacio de intercambio distendido entre los líderes de las tiendas de Galicia, Asturias y Castilla.
+                Espacio de intercambio distendido entre los equipos de Galicia, Asturias y Castilla.
               </p>
             </div>
           </div>
@@ -470,10 +478,10 @@
             <div class="flex-1 bg-gradient-to-r from-brandNavy to-[#2A3F50] text-white p-6 rounded-2xl shadow-md ml-12 md:ml-0 w-full">
               <div class="flex items-center justify-between gap-2 mb-2">
                 <h4 class="text-lg font-bold font-title text-white">Cena de Gala Regional & Reconocimientos</h4>
-                <span class="px-2.5 py-1 bg-brandTeal text-white text-xs font-bold rounded-lg">Restaurante / Finca Gijón</span>
+                <span class="px-2.5 py-1 bg-brandTeal text-white text-xs font-bold rounded-lg">Hotel Abba Playa Gijón</span>
               </div>
               <p class="text-sm text-gray-300 leading-relaxed mb-3">
-                Encuentro de confraternización, entrega de los reconocimientos regionales anuales y celebración conjunta de las tiendas de la zona Noroeste. (Salida de autobuses a las 20:15h desde los hoteles).
+                Encuentro de confraternización, entrega de los reconocimientos regionales anuales y celebración conjunta de la Región Noroeste en el Hotel Abba Playa Gijón. (Lanzadera a las 20:15h desde el Hotel Silken).
               </p>
               <div class="text-xs text-brandTeal font-medium">
                 Dress code: Casual elegante / Corporativo
@@ -491,7 +499,7 @@
             </div>
             <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm ml-12 md:ml-0 w-full">
               <h4 class="text-lg font-bold font-title text-brandNavy mb-1">Conclusiones de Mesas y Plan de Acción</h4>
-              <p class="text-sm text-brandTextMuted">Puesta en común por tiendas y compromisos trimestrales para cada región.</p>
+              <p class="text-sm text-brandTextMuted">Puesta en común por tiendas y compromisos trimestrales para cada zona.</p>
             </div>
           </div>
           <div class="relative flex flex-col md:flex-row items-start gap-4 md:gap-8">
@@ -546,7 +554,7 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="check" class="w-4 h-4 text-brandTeal shrink-0 mt-0.5"></i>
-                  <span><strong>WIFI en tienda:</strong> LM_EVENTOS_2026 (Clave disponible en acreditación).</span>
+                  <span><strong>WIFI en tienda:</strong> LM_EVENTOS_2027 (Clave disponible en acreditación).</span>
                 </li>
               </ul>
             </div>
@@ -597,14 +605,14 @@
                 <span class="px-3 py-1 bg-brandGreenLM text-white rounded-lg text-xs font-bold uppercase">Cena Oficial</span>
                 <i data-lucide="sparkles" class="w-6 h-6 text-brandGreenLM"></i>
               </div>
-              <h3 class="text-xl font-bold font-title text-brandNavy mb-2">Cena & Velada de Gala</h3>
+              <h3 class="text-xl font-bold font-title text-brandNavy mb-2">Hotel Abba Playa Gijón</h3>
               <p class="text-xs text-brandTextMuted mb-4">
-                Finca / Restaurante Típico Asturiano en Gijón
+                Paseo del Dr. Fleming, 37 · Salón de Gala
               </p>
               <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
                 <li class="flex items-start gap-2">
                   <i data-lucide="check" class="w-4 h-4 text-brandGreenLM shrink-0 mt-0.5"></i>
-                  <span><strong>Recomendación logística:</strong> Utilizar los autobuses oficiales contratados desde los hoteles.</span>
+                  <span><strong>Recomendación logística:</strong> Lanzadera oficial habilitada desde el Hotel Silken Ciudad Gijón a las 20:15h.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="check" class="w-4 h-4 text-brandGreenLM shrink-0 mt-0.5"></i>
@@ -612,7 +620,7 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="check" class="w-4 h-4 text-brandGreenLM shrink-0 mt-0.5"></i>
-                  <span><strong>Retorno:</strong> Autobuses continuos cada 30 min desde las 23:30h hasta el cierre.</span>
+                  <span><strong>Retorno:</strong> Autobuses de regreso hacia Hotel Silken desde las 23:30h hasta el cierre.</span>
                 </li>
               </ul>
             </div>
@@ -631,7 +639,7 @@
               <i data-lucide="map" class="w-5 h-5 text-brandTeal"></i>
               <span class="text-sm font-bold font-title text-brandNavy">Plano Esquemático de Ubicaciones en Gijón</span>
             </div>
-            <span class="text-xs text-brandTextMuted">Sede, Hoteles Concertados y Cena de Gala</span>
+            <span class="text-xs text-brandTextMuted">Sede Tienda Gijón, Hotel Silken y Hotel Abba (Cena Oficial)</span>
           </div>
 
           <div class="relative w-full h-80 bg-slate-100 flex items-center justify-center overflow-hidden">
@@ -647,7 +655,7 @@
               <path d="M450 140 L 500 400" stroke="#E2E8F0" stroke-width="6"/>
 
               <!-- PIN 1: Leroy Merlin Gijón -->
-              <g transform="translate(680, 240)">
+              <g transform="translate(680, 260)">
                 <circle cx="0" cy="0" r="22" fill="#009AA6" fill-opacity="0.2"/>
                 <circle cx="0" cy="0" r="14" fill="#009AA6"/>
                 <path d="M-6 -6 L6 -6 L0 7 Z" fill="#FFFFFF"/>
@@ -655,18 +663,18 @@
                 <text x="0" y="-28" font-family="Montserrat" font-size="11" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Leroy Merlin Gijón (Sede)</text>
               </g>
 
-              <!-- PIN 2: Hoteles -->
-              <g transform="translate(320, 150)">
+              <!-- PIN 2: Hotel Silken -->
+              <g transform="translate(270, 210)">
                 <circle cx="0" cy="0" r="12" fill="#1E2B37"/>
-                <rect x="-65" y="-38" width="130" height="24" rx="6" fill="#1E2B37"/>
-                <text x="0" y="-22" font-family="Montserrat" font-size="10" fill="#FFFFFF" text-anchor="middle">Hoteles (Centro/Playa)</text>
+                <rect x="-75" y="-38" width="150" height="24" rx="6" fill="#1E2B37"/>
+                <text x="0" y="-22" font-family="Montserrat" font-size="10" fill="#FFFFFF" text-anchor="middle">Hotel Silken Ciudad Gijón</text>
               </g>
 
-              <!-- PIN 3: Cena -->
-              <g transform="translate(220, 310)">
-                <circle cx="0" cy="0" r="12" fill="#78BE20"/>
-                <rect x="-60" y="-38" width="120" height="24" rx="6" fill="#78BE20"/>
-                <text x="0" y="-22" font-family="Montserrat" font-size="10" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Restaurante Gala</text>
+              <!-- PIN 3: Hotel Abba (Alojamiento + Cena Oficial) -->
+              <g transform="translate(560, 125)">
+                <circle cx="0" cy="0" r="14" fill="#78BE20"/>
+                <rect x="-95" y="-38" width="190" height="24" rx="6" fill="#78BE20"/>
+                <text x="0" y="-22" font-family="Montserrat" font-size="10" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Hotel Abba (Alojamiento y Cena)</text>
               </g>
             </svg>
             
@@ -677,11 +685,11 @@
               </div>
               <div class="flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-brandNavy"></span>
-                <span>Hoteles oficiales de concentración</span>
+                <span>Hotel Silken Ciudad Gijón</span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-brandGreenLM"></span>
-                <span>Cena Regional</span>
+                <span>Hotel Abba Playa Gijón (Alojamiento y Cena)</span>
               </div>
             </div>
           </div>
@@ -700,7 +708,7 @@
             Lanzaderas Oficiales y Hoteles Concertados
           </h2>
           <p class="text-brandTextMuted mt-2 text-sm sm:text-base">
-            Información sobre los autobuses internos habilitados para evitar desplazamientos en vehículo propio durante la noche.
+            Información sobre los autobuses internos habilitados entre hoteles, tienda y la cena oficial en el Hotel Abba Playa Gijón.
           </p>
         </div>
 
@@ -713,7 +721,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-bold font-title text-brandNavy">Lanzadera Mañana: Hoteles → Tienda Gijón</h3>
-                <span class="text-xs text-brandTeal font-semibold">Jornada 1 · Convención</span>
+                <span class="text-xs text-brandTeal font-semibold">11 de Marzo · Convención</span>
               </div>
             </div>
 
@@ -723,7 +731,7 @@
                 <div class="text-xs text-brandTextMuted">Punto de encuentro en puerta principal</div>
               </div>
               <div>
-                <strong class="text-brandNavy font-title">08:15h · Parada 2:</strong> Hotel Abba Gijón (Playa de San Lorenzo)
+                <strong class="text-brandNavy font-title">08:15h · Parada 2:</strong> Hotel Abba Playa Gijón
                 <div class="text-xs text-brandTextMuted">Frente a la marquesina de recepción</div>
               </div>
               <div>
@@ -740,22 +748,22 @@
                 <i data-lucide="moon" class="w-5 h-5"></i>
               </div>
               <div>
-                <h3 class="text-lg font-bold font-title text-brandNavy">Lanzadera Noche: Hoteles ↔ Cena Oficial</h3>
+                <h3 class="text-lg font-bold font-title text-brandNavy">Lanzadera Noche: Hotel Silken ↔ Cena Hotel Abba</h3>
                 <span class="text-xs text-brandTeal font-semibold">Ida y vuelta nocturna</span>
               </div>
             </div>
 
             <div class="space-y-4 border-l-2 border-brandNavy/30 ml-4 pl-4 py-2 text-sm">
               <div>
-                <strong class="text-brandNavy font-title">20:15h · Salida Ida:</strong> Ruta unificada por hoteles concertados
-                <div class="text-xs text-brandTextMuted">Por favor ser puntuales para evitar demoras en la cena</div>
+                <strong class="text-brandNavy font-title">20:15h · Salida Ida:</strong> Desde Hotel Silken Ciudad Gijón
+                <div class="text-xs text-brandTextMuted">Traslado directo hacia el Hotel Abba Playa Gijón</div>
               </div>
               <div>
-                <strong class="text-brandNavy font-title">20:45h · Llegada:</strong> Finca / Restaurante de la Gala
+                <strong class="text-brandNavy font-title">20:45h · Inicio Cena:</strong> Salón de Gala · Hotel Abba Playa Gijón
               </div>
               <div>
                 <strong class="text-brandNavy font-title">23:30h / 00:30h / 01:30h · Retornos:</strong>
-                <div class="text-xs text-brandTextMuted">Autobús de vuelta continuo hacia los dos hoteles oficiales</div>
+                <div class="text-xs text-brandTextMuted">Autobús de vuelta desde el Hotel Abba hacia el Hotel Silken</div>
               </div>
             </div>
           </div>
@@ -776,7 +784,7 @@
                 </p>
                 <div class="text-xs text-gray-600 space-y-1">
                   <div>✔ Reserva centralizada por Leroy Merlin</div>
-                  <div>✔ Desayuno buffet incluido</div>
+                  <div>✔ Lanzadera directa a Tienda y a Cena en Hotel Abba</div>
                 </div>
               </div>
               <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
@@ -792,18 +800,18 @@
             </div>
             <div class="p-6 sm:w-3/5 flex flex-col justify-between">
               <div>
-                <span class="text-[11px] font-bold uppercase tracking-wider text-brandTeal">Hotel Concertado B</span>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brandGreenLM">Hotel Concertado B · Sede Cena Oficial</span>
                 <h4 class="text-lg font-bold font-title text-brandNavy mt-1">Hotel Abba Playa Gijón (4*)</h4>
                 <p class="text-xs text-brandTextMuted mt-1 mb-4">
-                  Paseo del Dr. Fleming, 37. Vistas al mar y rápido enlace con las vías de circunvalación hacia la tienda.
+                  Paseo del Dr. Fleming, 37. Sede de la Cena Oficial de Gala y rápido enlace con la tienda.
                 </p>
                 <div class="text-xs text-gray-600 space-y-1">
                   <div>✔ Reserva centralizada por Leroy Merlin</div>
-                  <div>✔ Parking exterior concertado</div>
+                  <div>✔ Sede de la Cena Oficial de la Convención</div>
                 </div>
               </div>
               <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
-                <span class="text-brandNavy font-semibold">Parada de autobús propia</span>
+                <span class="text-brandNavy font-semibold">Sede Cena de Gala</span>
                 <span class="text-emerald-700 font-bold">Bloque reservado</span>
               </div>
             </div>
@@ -834,7 +842,7 @@
                 <i data-lucide="folder-open" class="w-6 h-6"></i>
               </div>
               <div>
-                <h4 class="font-bold font-title text-brandNavy text-base">Carpeta Oficial: Convención Noroeste 2026</h4>
+                <h4 class="font-bold font-title text-brandNavy text-base">Carpeta Oficial: Convención Noroeste 2027</h4>
                 <span class="text-xs text-brandTextMuted">Documentación actualizada para asistentes y ponentes</span>
               </div>
             </div>
@@ -843,13 +851,12 @@
               <span class="text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-bold flex items-center gap-1">
                 <i data-lucide="check" class="w-3.5 h-3.5"></i> Actualizado
               </span>
-              <button onclick="triggerMockDownload('Carpeta_Completa_Gijon2026.zip')" class="px-3.5 py-1.5 bg-brandTeal hover:bg-brandTealDark text-white font-semibold text-xs rounded-lg transition-colors flex items-center gap-1.5">
+              <button onclick="triggerMockDownload('Carpeta_Completa_Gijon2027.zip')" class="px-3.5 py-1.5 bg-brandTeal hover:bg-brandTealDark text-white font-semibold text-xs rounded-lg transition-colors flex items-center gap-1.5">
                 <i data-lucide="download-cloud" class="w-3.5 h-3.5"></i> Descargar Todo (.zip)
               </button>
             </div>
           </div>
 
-          <!-- Listado de Archivos (Puedes sustituir triggerMockDownload por href="tu-enlace-drive" cuando subas los PDFs) -->
           <div class="divide-y divide-gray-100 mt-2">
             <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-gray-50 px-2 rounded-xl transition-colors">
               <div class="flex items-center gap-3">
@@ -857,11 +864,11 @@
                   <i data-lucide="file-text" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h5 class="text-sm font-bold text-brandNavy">Dossier_Bienvenida_Convencion_Gijon_2026.pdf</h5>
+                  <h5 class="text-sm font-bold text-brandNavy">Dossier_Bienvenida_Convencion_Gijon_2027.pdf</h5>
                   <p class="text-xs text-brandTextMuted">Guía completa de 16 páginas con mapas, teléfonos y normas de tienda (2.4 MB)</p>
                 </div>
               </div>
-              <button onclick="triggerMockDownload('Dossier_Bienvenida_Convencion_Gijon_2026.pdf')" class="self-end sm:self-center px-3 py-1.5 text-xs font-semibold text-brandTeal hover:bg-brandTeal/10 rounded-lg flex items-center gap-1">
+              <button onclick="triggerMockDownload('Dossier_Bienvenida_Convencion_Gijon_2027.pdf')" class="self-end sm:self-center px-3 py-1.5 text-xs font-semibold text-brandTeal hover:bg-brandTeal/10 rounded-lg flex items-center gap-1">
                 <i data-lucide="download" class="w-4 h-4"></i> Descargar
               </button>
             </div>
@@ -872,11 +879,11 @@
                   <i data-lucide="presentation" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h5 class="text-sm font-bold text-brandNavy">Plantilla_Presentaciones_2026_Oficial.pptx</h5>
+                  <h5 class="text-sm font-bold text-brandNavy">Plantilla_Presentaciones_2027_Oficial.pptx</h5>
                   <p class="text-xs text-brandTextMuted">Plantilla corporativa con tipografías y colores autorizados para ponentes (14.8 MB)</p>
                 </div>
               </div>
-              <button onclick="triggerMockDownload('Plantilla_Presentaciones_2026_Oficial.pptx')" class="self-end sm:self-center px-3 py-1.5 text-xs font-semibold text-brandTeal hover:bg-brandTeal/10 rounded-lg flex items-center gap-1">
+              <button onclick="triggerMockDownload('Plantilla_Presentaciones_2027_Oficial.pptx')" class="self-end sm:self-center px-3 py-1.5 text-xs font-semibold text-brandTeal hover:bg-brandTeal/10 rounded-lg flex items-center gap-1">
                 <i data-lucide="download" class="w-4 h-4"></i> Descargar
               </button>
             </div>
@@ -977,7 +984,7 @@
               <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-brandTeal transition-transform"></i>
             </button>
             <div id="faq-content-1" class="hidden px-5 pb-5 text-sm text-brandTextMuted border-t border-gray-100 pt-3">
-              Para las sesiones de trabajo matinales en la tienda de Gijón se recomienda ropa informal corporativa cómoda (camisa, polo o jersey con calzado apto para caminar por tienda). Para la cena oficial de gala, el código es casual elegante.
+              Para las sesiones de trabajo matinales en la tienda de Gijón se recomienda ropa informal corporativa cómoda (camisa, polo o jersey con calzado apto para caminar por tienda). Para la cena oficial en el Hotel Abba Playa Gijón, el código es casual elegante.
             </div>
           </div>
 
@@ -993,11 +1000,11 @@
 
           <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
             <button onclick="toggleFaq(3)" class="w-full text-left p-5 flex justify-between items-center font-title font-bold text-brandNavy hover:text-brandTeal transition-colors">
-              <span>¿Puedo asistir a la cena oficial en mi propio vehículo?</span>
+              <span>¿Cómo me desplazo a la cena oficial en el Hotel Abba si estoy en el Hotel Silken?</span>
               <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-brandTeal transition-transform"></i>
             </button>
             <div id="faq-content-3" class="hidden px-5 pb-5 text-sm text-brandTextMuted border-t border-gray-100 pt-3">
-              Aunque la finca dispone de aparcamiento, recomendamos encarecidamente emplear las lanzaderas de autobús concertadas para garantizar la seguridad de todos los participantes y facilitar el disfrute de la velada.
+              Habrá una lanzadera oficial directa desde la puerta del Hotel Silken Ciudad Gijón a las 20:15h hacia el Hotel Abba Playa Gijón, con turnos de regreso continuo a partir de las 23:30h.
             </div>
           </div>
 
@@ -1007,7 +1014,7 @@
               <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-brandTeal transition-transform"></i>
             </button>
             <div id="faq-content-4" class="hidden px-5 pb-5 text-sm text-brandTextMuted border-t border-gray-100 pt-3">
-              A través de la aplicación corporativa de liquidación de gastos de viaje habitual seleccionando en el desplegable el centro de coste de la Convención Regional Noroeste 2026.
+              A través de la aplicación corporativa de liquidación de gastos de viaje habitual seleccionando en el desplegable el centro de coste de la Convención Regional Noroeste 2027.
             </div>
           </div>
         </div>
@@ -1032,10 +1039,16 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-gray-700">
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-lg bg-white p-1 flex items-center justify-center">
-            <svg viewBox="0 0 100 100" class="w-7 h-7">
-              <polygon points="50,12 90,82 10,82" fill="#78BE20" />
-              <polygon points="50,28 78,76 22,76" fill="#FFFFFF" />
+          <div class="h-10 px-2 rounded-lg bg-white flex items-center justify-center">
+            <!-- Logo oficial Leroy Merlin en SVG -->
+            <svg viewBox="0 0 220 135" class="h-8 w-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Leroy Merlin">
+              <polygon points="110,48 192,132 28,132" fill="#78BE20" />
+              <g transform="translate(106, 36) rotate(-45)">
+                <text x="-8" y="0" font-family="Montserrat, Arial, sans-serif" font-weight="900" font-size="25" fill="#0B1F2C" text-anchor="end" letter-spacing="0.5">LEROY</text>
+              </g>
+              <g transform="translate(114, 36) rotate(45)">
+                <text x="8" y="0" font-family="Montserrat, Arial, sans-serif" font-weight="900" font-size="25" fill="#0B1F2C" text-anchor="start" letter-spacing="0.5">MERLIN</text>
+              </g>
             </svg>
           </div>
           <div>
@@ -1056,12 +1069,12 @@
 
       <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
         <div>
-          Portal interno para la Convención Regional Gijón 2026. Todos los derechos reservados.
+          Portal interno para la Convención Regional Gijón 2027. Todos los derechos reservados.
         </div>
         <div class="flex items-center gap-2">
-          <span>Identidad corporativa 2026</span>
+          <span>Identidad corporativa 2027</span>
           <span class="w-1.5 h-1.5 rounded-full bg-brandTeal"></span>
-          <span class="text-brandGreenLM font-semibold">Gijón · Marzo 2026</span>
+          <span class="text-brandGreenLM font-semibold">Gijón · 11 Marzo 2027</span>
         </div>
       </div>
     </div>
@@ -1073,7 +1086,6 @@
       lucide.createIcons();
       initCountdown();
 
-      // Permitir abrir una sección directamente mediante URL (#agenda, #logistica, etc.)
       const initialHash = window.location.hash.replace('#', '');
       const validViews = ['inicio', 'agenda', 'logistica', 'traslados', 'documentacion', 'contacto'];
       if (validViews.includes(initialHash)) {
@@ -1149,8 +1161,8 @@
     }
 
     function initCountdown() {
-      // Cambia esta fecha si deseas ajustar el día y hora exacta del contador
-      const targetDate = new Date("March 8, 2026 09:00:00").getTime();
+      // Cuenta regresiva oficial para el 11 de marzo de 2027 a las 09:00h
+      const targetDate = new Date("March 11, 2027 09:00:00").getTime();
 
       function updateTimer() {
         const now = new Date().getTime();
